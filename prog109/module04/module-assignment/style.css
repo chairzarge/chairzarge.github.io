@@ -1,0 +1,98 @@
+/* My CSS */
+
+@import url("https://fontlibrary.org//face/minecraftia");
+
+html {
+    background-image: url("https://cdn.wallpaperhub.app/cloudcache/e/6/7/3/1/4/e6731493cd50103e3561288c33a6a589c9bf67ab.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+}
+
+h1 {
+    font-family: "Minecraftia", Helvetica;
+}
+
+#nav {
+    background-color: rgb(255, 91, 91);
+}
+
+#feature {
+    background-color: rgb(255, 188, 62);
+    background-image: url("https://www.health.com/thmb/aljyGn28Uy8GKBu9Ytn2LHVQJ_E=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/rainbow-cf3af814f86b4c49bb411ed470fc40b9.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+}
+
+.column1 {
+    background-color: rgb(255, 255, 107);
+}
+
+.column2 {
+    background-color: rgb(75,128,75);
+}
+
+.column3 {
+    background-color: rgb(73, 73, 255);
+}
+
+#footer {
+    background-color: rgb(128, 46, 128);
+}
+
+
+/* The Rest of the CSS */
+
+* {
+    font-family: Arial, Verdana, sans-serif;
+    color: black;
+    text-align: center;
+}
+
+body {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#content {
+    overflow: auto;
+}
+
+#nav,
+#feature,
+#footer {
+    margin: 1%;
+}
+
+.column1,
+.column2,
+.column3 {
+    width: 31.3%;
+    float: left;
+    margin: 1%;
+}
+
+.column3 {
+    margin-right: 0%;
+}
+
+li {
+    display: inline;
+    padding: 0.5em;
+}
+
+#nav,
+#footer {
+    /* background-color: #efefef; */
+    padding: 0.5em 0;
+}
+
+#feature,
+.article {
+    height: 10em;
+    margin-bottom: 1em;
+    /* background-color: #efefef; */
+}
+
