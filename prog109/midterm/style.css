@@ -1,0 +1,57 @@
+
+
+* {
+    font-family: Consolas, monospace;
+    color: white;
+}
+
+html {
+    /*
+    background-image: url("https://cdn.wallpaperhub.app/cloudcache/e/6/7/3/1/4/e6731493cd50103e3561288c33a6a589c9bf67ab.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    */
+    background-color: rgb(47, 47, 47);
+}
+
+
+
+#nav {
+    display: flex;
+    width: 100%;
+
+    justify-content: space-evenly;
+}
+
+#nav li {
+    display: inline;
+}
+
+header {
+    margin: 20px 10px;
+    text-align: center;
+}
+
+header, #description, #side-column {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(136, 136, 136, 0.75);
+}
+
+#main {
+    margin: 20px 10px;
+
+    display: grid;
+    grid-template-columns: 70% 28%;
+    column-gap: 2%;
+}
+
+#description, #side-column {
+    text-align: left;
+}
+
+
+
+
