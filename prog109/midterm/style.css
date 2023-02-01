@@ -1,7 +1,7 @@
 
-
+/* Non-element specific CSS */
 * {
-    font-family: Consolas, monospace;
+    font-family: Helvetica, sans-serif;
     color: white;
 }
 
@@ -16,42 +16,97 @@ html {
     background-color: rgb(47, 47, 47);
 }
 
-
-
-#nav {
-    display: flex;
-    width: 100%;
-
-    justify-content: space-evenly;
+body {
+    min-width: 960px;
 }
 
-#nav li {
-    display: inline;
-}
 
-header {
-    margin: 20px 10px;
-    text-align: center;
-}
-
+/* Header stuff */
 header, #description, #side-column {
-    padding: 10px;
     border-radius: 10px;
     background-color: rgba(136, 136, 136, 0.75);
 }
 
-#main {
-    margin: 20px 10px;
+header {
+    padding: 10px;
+    margin: 40px 40px 20px 40px;
+    text-align: center;
+    font-size: 18px;
+}
 
+#nav menu {
+    display: flex;
+    width: 100%;
+    padding: 0px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#nav menu li {
+    margin-bottom: 15px;
+    display: inline;
+    flex: 150px;
+}
+
+
+/* Page Content */
+#main {
+    margin: 20px 40px 20px 40px;
+    font-size: 18px;
+}
+
+#main.twoColumns {
     display: grid;
     grid-template-columns: 70% 28%;
     column-gap: 2%;
 }
 
 #description, #side-column {
+    line-height: 1.5;
+    padding: 20px;
     text-align: left;
 }
 
+#description h1 {
+    margin: 0px 20px 20px 20px;
+}
 
+
+/* Forms */
+input, textarea {
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: rgb(114, 114, 114);
+}
+
+
+/* Validated Page */
+#screenshots, #html, #css {
+    border: white solid;
+    border-radius: 10px;
+    padding: 10px;
+    overflow: auto;
+    background-color: #8eb8fa;
+}
+
+#html {
+    width: 45%;
+    float: left;
+    background-color: #fcf4c2;
+}
+
+#css {
+    width: 45%;
+    float: right;
+    background-color: #f4c2fc;
+}
+
+h3 {
+    border: rgb(114, 114, 114) solid;
+    border-radius: 10px;
+    background-color: rgb(114, 114, 114);
+    display: inline;
+    padding: 5px
+}
 
 
