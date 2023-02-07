@@ -77,3 +77,8 @@ form label #submit {
     font-family: 'Wellfleet', times, serif;
     font-size: 75%;
 }
+
+form label #numberInput {
+    font-family: 'Wellfleet', times, serif;
+    font-size: 75%
+}
