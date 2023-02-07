@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Exercise 1</title>
+    <link rel="stylesheet" href="exercise1.css">
+    <script defer src="exercise1.js"></script>
+</head>
+
+<body>
+    <div id="page2">
+        <form>
+            <label id="number">
+                Enter Number: <br>
+                <input type="number" name="number" id="numberInput">
+            </label>
+            <br>
+            <br>
+            <label>
+                <input type="radio" name="operatorType" value="addition"> Addition
+            </label>
+            <label>
+                <input type="radio" name="operatorType" value="multiplication"> Multiplication
+            </label>
+            <br>
+            <br>
+            <label>
+                <input type="button" id="submit" onclick="displayTable()" value="Submit">
+            </label>
+        </form>
+        <section id="blackboard"></section>
+
+    </div>
+
+</body>
+
+</html>
