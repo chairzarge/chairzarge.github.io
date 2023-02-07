@@ -80,5 +80,6 @@ form label #submit {
 
 form label #numberInput {
     font-family: 'Wellfleet', times, serif;
-    font-size: 75%
+    font-size: 75%;
+    text-align: center;
 }
