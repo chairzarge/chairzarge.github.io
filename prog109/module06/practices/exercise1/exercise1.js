@@ -7,6 +7,10 @@ var operator = prompt("Enter addition or multiplication"); // Type of calculatio
 
 function displayTable() {
     var number = Number(document.querySelector("input[name='number']").value);
+    if (Number.isNaN(number)) {
+        alert("Please enter a number");
+        return;
+    }
     var operator = document.querySelector("input[name='operatorType']:checked").value;
     generateTable(number,operator);
 }
