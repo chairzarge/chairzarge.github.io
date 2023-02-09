@@ -19,7 +19,7 @@ function Person(firstName, lastName, weight, height, birthday, gender) {
 
     this.BMI = function() {
         return (weight)/(height*height);
-    } ()
+    };
 }
 
 
@@ -33,5 +33,5 @@ let people = [  person1,
 
 console.log(people);
 
-people.forEach(person => console.log(person.BMI))
+people.forEach(person => console.log(person.BMI()))
 
