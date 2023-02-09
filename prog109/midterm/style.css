@@ -18,9 +18,9 @@ html {
     background-repeat: no-repeat;
     background-position: center;
     height: 100%;
-    /*
+    
     background-color: rgb(47, 47, 47);
-    */
+    
 
 
     --main-bg-color-transparent: rgb(53, 54, 58, 0.95);
@@ -62,9 +62,19 @@ header {
 }
 
 #nav menu li {
+    flex: calc(100%/5);
+
     margin-bottom: 15px;
-    display: inline;
-    flex: 150px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 1320px) {
+    #nav menu li {
+        flex: 150px;
+    }
 }
 
 #nav menu li a {
