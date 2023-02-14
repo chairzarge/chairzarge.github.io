@@ -32,15 +32,45 @@
         <div id="description">
             <h1>Validated</h1>
 
-            <div id="screenshots">
-                <div id="html">
-                    <h3>HTML</h3>
-                    <img src="imgs/html-verification.png" alt="HTML Verification of this page">
-                </div>
-                <div id="css">
-                    <h3>CSS</h3>
-                    <img src="imgs/css-verification.png" alt="CSS Verification of this page">
-                </div>
+            <div id="screenshot-wrapper">
+                <script>
+                    let mes = "", temp = "";
+                    let pageNames = ["Home","About","Coursework","Artifacts","Module Assignments","Contact Me","Creative Page","Validated","Thank You"];
+                    let pageNamesDashCase = ["home","about","coursework","artifacts","module-assignments","contact-me","creative-page","validated","thank-you"];
+
+                    for (let i = 0; i < pageNames.length; i++) {
+                        let pageName = pageNames[i];
+                        let pageNameDashCase = pageNamesDashCase[i];
+                        temp = `<h1>${pageName}</h1>
+                                    <div id="screenshots">
+                                    <div id="html">
+                                        <h3>HTML</h3>
+                                        <img src="imgs/verification/html-verification-${pageNameDashCase}.png" alt="HTML Verification of ${pageName} page">
+                                    </div>
+                                    <div id="css">
+                                        <h3>CSS</h3>
+                                        <img src="imgs/verification/css-verification-${pageNameDashCase}.png" alt="CSS Verification of ${pageName} page">
+                                    </div>
+                                    
+                                    </div>
+                                <br>`;
+                        mes += temp;
+                    }
+                    document.write(mes);
+                </script>
+                <!--
+                    <h1>Home</h1>
+                    <div id="screenshots">
+                        <div id="html">
+                            <h3>HTML</h3>
+                            <img src="imgs/html-verification.png" alt="HTML Verification of this page">
+                        </div>
+                        <div id="css">
+                            <h3>CSS</h3>
+                            <img src="imgs/css-verification.png" alt="CSS Verification of this page">
+                        </div>
+                    </div>
+                -->
             </div>
         </div>
     
