@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="../../../darkmode.css">
+
+    <script defer src="script.js"></script>
+
+    <title>Exercise 2</title>
+</head>
+
+<body>
+    <button id="myButton">Click me!</button>
+
+    <script>
+        const myButton = document.getElementById("myButton");
+        let timeoutId = null;
+
+        function debounce(func, delay) {
+            let timerId;
+            return function () {
+                const context = this;
+                const args = arguments;
+                if (!timerId) {
+                    // If the timer is not set, execute the function immediately
+                    func.apply(context, args);
+                }
+                clearTimeout(timerId);
+                timerId = setTimeout(function () {
+                    // Debounce subsequent calls for the specified delay time
+                    timerId = null;
+                }, delay);
+            }
+        }
+
+        // Example usage:
+        const button = document.getElementById("myButton");
+        button.addEventListener("click", debounce(function () {
+            console.log("Button clicked!");
+        }, 500));
+
+    </script>
+</body>
+
+</html>
