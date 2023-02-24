@@ -15,3 +15,11 @@ button {
     color: white;
     background-color: rgb(45, 46, 48);
 }
+
+a {
+    color: lightblue;
+}
+
+a:visited {
+    color: lightpink;
+}
