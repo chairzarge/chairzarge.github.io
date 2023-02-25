@@ -10,39 +10,75 @@
     <script defer src="script.js"></script>
 
     <title>Exercise 2</title>
+
+    <link href="../../../darkmode.css" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: Minecraftia;
+            src: url("../../../fonts/Minecraftia.ttf");
+        }
+
+        html {
+            background-color: rgb(0, 34, 170);
+        }
+
+        body {
+            text-align: center;
+        }
+
+        h1 {
+            font-family: Minecraftia;
+        }
+
+        p {
+            font-family: Consolas;
+        }
+
+        ul {
+            padding: 0px
+        }
+
+        li {
+            display: block;
+        }
+
+        li.crossedOut {
+            text-decoration: line-through;
+            text-decoration-thickness: 5px;
+            text-decoration-color: red;
+        }
+
+        area {
+            cursor: pointer;
+        }
+    </style>
+
 </head>
 
 <body>
-    <button id="myButton">Click me!</button>
+    <h1>I Spy</h1>
+    <p>See if you can find the following objects on the picture. Once you find them, click on them!</p>
+    <div>
+        <ul>
+            <li name="watch">Watch</li>
+            <li name="litCandle">Lit Candle</li>
+            <li name="dice">Dice</li>
+            <li name="letter">Letter</li>
+        </ul>
+    </div>
+    <map name="iSpyMap">
 
-    <script>
-        const myButton = document.getElementById("myButton");
-        let timeoutId = null;
+        <area name="watch" shape="circle" coords="580,340,20">
+        <area name="watch" shape="circle" coords="620,300,20">
 
-        function debounce(func, delay) {
-            let timerId;
-            return function () {
-                const context = this;
-                const args = arguments;
-                if (!timerId) {
-                    // If the timer is not set, execute the function immediately
-                    func.apply(context, args);
-                }
-                clearTimeout(timerId);
-                timerId = setTimeout(function () {
-                    // Debounce subsequent calls for the specified delay time
-                    timerId = null;
-                }, delay);
-            }
-        }
+        <area name="litCandle" shape="rect" coords="230,150,260,240">
 
-        // Example usage:
-        const button = document.getElementById("myButton");
-        button.addEventListener("click", debounce(function () {
-            console.log("Button clicked!");
-        }, 500));
+        <area name="dice" shape="circle" coords="208,350,10">
+        <area name="dice" shape="circle" coords="202,277,10">
 
-    </script>
+        <area name="letter" shape="rect" coords="218,54,340,123">
+    </map>
+    <img usemap="#iSpyMap" src="imgs/ispy.jpg" alt="An image with many objects">
 </body>
 
 </html>
