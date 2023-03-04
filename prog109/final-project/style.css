@@ -1,0 +1,172 @@
+/* Fonts */
+@font-face {                            /* https://fontlibrary.org/en/font/minecraftia */
+    font-family: Minecraftia;
+    src: url("fonts/Minecraftia.ttf");
+}
+
+
+
+/* General CSS */
+* {
+    color: white;
+}
+
+html {
+    background-image: url("pages/imgs/resized\ Longer\ dalle\ image\ edited\ for\ ratio\ \(Custom\).png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    
+    background-color: rgb(47, 47, 47);
+
+    --main-bg-color-transparent: rgb(53, 54, 58, 0.95);
+    --main-bg-color: rgb(53,54,58);
+}
+
+body {
+
+    
+    min-width: 960px;
+}
+
+header, #description, #side-column {
+    border-radius: 10px; 
+    background-color: var(--main-bg-color-transparent);
+}
+
+
+/* Header stuff */
+h1 {
+    font-family: Minecraftia, sans-serif;
+    font-size: 30px;
+}
+
+
+header {
+    font-family: Minecraftia, sans-serif;
+    padding: 10px;
+    margin: 40px 40px 20px 40px;
+    text-align: center;
+    font-size: 18px;
+}
+
+#nav menu {
+    display: flex;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#nav menu li {
+    flex: calc(100%/5);
+
+    margin-bottom: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 1320px) {
+    #nav menu li {
+        flex: 150px;
+    }
+}
+
+#nav menu li a {
+    text-decoration: none;
+}
+
+#nav menu li a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+/* Page Content */
+#main {
+    margin: 20px 40px 20px 40px;
+    font-family: Helvetica, sans-serif; 
+    font-size: 18px;
+}
+
+#main.twoColumns {
+    display: grid;
+    grid-template-columns: 70% 28%;
+    column-gap: 2%;
+}
+
+#description, #side-column {
+    line-height: 1.5;
+    padding: 20px;
+    text-align: left;
+}
+
+#description h1 {
+    margin: 0px 20px 20px 20px;
+}
+
+
+/* Forms */
+input, textarea {
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: rgb(114, 114, 114);
+}
+
+
+/* Validated Page */
+#screenshot-wrapper, #html, #css {
+    border: white solid;
+    border-radius: 10px;
+    padding: 10px;
+    overflow: auto;
+    background-color: #8eb8fa;
+}
+
+#html {
+    width: 45%;
+    float: left;
+    background-color: #fcf4c2;
+    clear: left;
+}
+
+#css {
+    width: 45%;
+    float: right;
+    background-color: #f4c2fc;
+}
+
+#html h3, #css h3 {
+    border: var(--main-bg-color) solid;
+    border-radius: 10px;
+    background-color: var(--main-bg-color);
+    display: inline;
+    padding: 5px;
+}
+
+#html img, #css img {
+    display: block;
+    border-radius: 10px;
+    width: 100%;
+    margin: 10px 0px 0px 0px;
+}
+
+
+
+#screenshot-wrapper h1 {
+    font-family: Helvetica, sans-serif;
+    border: var(--main-bg-color) solid;
+    border-radius: 10px;
+    background-color: var(--main-bg-color);
+    
+    padding: 5px;
+    margin: 10px 0px;
+
+    float: left;
+    clear: both;
+}
