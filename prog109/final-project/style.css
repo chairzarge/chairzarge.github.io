@@ -12,11 +12,7 @@
 }
 
 html {
-    background-image: url("pages/imgs/resized\ Longer\ dalle\ image\ edited\ for\ ratio\ \(Custom\).png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100%;
+    margin: 0;
     
     background-color: rgb(47, 47, 47);
 
@@ -25,7 +21,16 @@ html {
 }
 
 body {
+    margin: 0;
+    background-image: url("pages/imgs/resized\ Longer\ dalle\ image\ edited\ for\ ratio\ \(Custom\).png");
+    background-size: cover;
 
+    background-repeat: no-repeat;
+    background-position: center;
+
+    min-height: 100vh; 
+
+    width: 100%;
     
     min-width: 960px;
 }
@@ -110,9 +115,44 @@ header {
     margin: 0px 20px 20px 20px;
 }
 
+/* Creative Page */
 img {
     width: 100%;
     height: 100%;
+}
+
+/* Course Work Page */
+
+div.quarter {
+    background-color: rgb(25, 25, 101);
+    border-radius: 10px;
+
+    padding: 10px;
+    margin: 10px 10px 10px 40px;
+}
+
+div.quarter h2 {
+    margin: 0px;
+}
+
+div.course {
+    background-color: palevioletred;
+    border-radius: 10px;
+
+    padding: 10px;
+    margin: 10px 10px 10px 20px;
+}
+
+div.course h3 {
+    margin: 0px;
+}
+
+div.knowledge {
+    background-color: deepskyblue;
+    border-radius: 10px;
+
+    padding: 10px;
+    margin: 10px 10px 10px 20px;
 }
 
 
