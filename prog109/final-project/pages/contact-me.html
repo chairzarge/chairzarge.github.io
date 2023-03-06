@@ -29,32 +29,83 @@
     </header>
 
     
-    <div id="main" class="twoColumns">
+    <div id="main">
         <div id="description">
             <h1>Contact Me</h1>
 
-            <form action="thank-you.html" method="get" name="contactForm"> 
+            <form action="thank-you.html" method="get" name="contactForm" onsubmit="return validateForm()"> 
                 <label> 
                     Name: <br>
-                    <input type="text" name="name" >
-                </label> <br>
+                    <input type="text" name="name">
+                    <div class="emptyErrorMessage" id="nameError"></div>
+                </label> 
                 <label>
                     Email: <br>
                     <input type="text" name="e-mail">
-                </label> <br>
+                    <div class="emptyErrorMessage" id="emailError"></div>
+                </label>
                 <label>
                     Comment: <br>
                     <textarea name="comment"></textarea>
-                </label> <br>
+                    <div class="emptyErrorMessage" id="commentError"></div>
+                </label> 
                 <input type="submit" value="Submit">
             </form>
         </div>
     
-        <div id="side-column">
-            
-        </div>
+        
     </div>
     <div>&emsp;</div>
+
+    <script>
+        function validateForm () {
+            let name = document.getElementsByTagName("input")[0];
+            let email = document.getElementsByTagName("input")[1];
+            let comment = document.getElementsByTagName("textarea")[0];
+
+            let validName = true, validEmail = true, validComment = true;
+
+            let nameError = document.querySelector("#nameError"); 
+            nameError.innerHTML = "";
+            nameError.classList.replace("filledErrorMessage","emptyErrorMessage");
+            let emailError = document.querySelector("#emailError"); 
+            emailError.innerHTML = "";
+            emailError.classList.replace("filledErrorMessage","emptyErrorMessage");
+            let commentError = document.querySelector("#commentError"); 
+            commentError.innerHTML = "";
+            commentError.classList.replace("filledErrorMessage","emptyErrorMessage");
+
+            //Name Validation
+            if (name.value == null || name.value == "") {
+                validName = false;
+                nameError.classList.replace("emptyErrorMessage","filledErrorMessage");
+                nameError.innerHTML += "Name is a Required Field <br>";
+            } 
+
+            //Email Validation
+            if (email.value == null || email.value == "") {
+                validEmail = false;
+                emailError.classList.replace("emptyErrorMessage","filledErrorMessage");
+                emailError.innerHTML += "Email is a Required Field <br>";
+            } else {
+                let pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                if (!pattern.test(email.value)) {
+                    validEmail = false;
+                    emailError.classList.replace("emptyErrorMessage","filledErrorMessage");
+                    emailError.innerHTML += "Email is Invalid <br>";
+                }
+            }
+
+            //Comment
+            if (comment.value == null || comment.value == "") {
+                validComment = false;
+                commentError.classList.replace("emptyErrorMessage","filledErrorMessage");
+                commentError.innerHTML += "Please Provide a Relevant Comment <br>";
+            }
+            
+            return validName && validEmail && validComment;
+        }
+    </script>
 </body>
 
 </html>

@@ -116,10 +116,51 @@ header {
 }
 
 /* Creative Page */
-img {
+p {
+    overflow: hidden;
+}
+
+#side-column img {
     width: 100%;
     height: 100%;
 }
+
+p img {
+    float: right;
+    width: 50%;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.iframe-container {
+    position: relative;
+    padding-bottom: 56.25%;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    border-radius: 10px;
+}
+
+#specialInterest {
+    background-color: rgba(7, 7, 154, 0.582);
+    border-radius: 10px;
+
+    padding: 10px;
+    margin: 10px 10px 10px 20px;
+
+    overflow: hidden;
+}
+
+#specialInterest h3 {
+    margin: 0;
+}
+
 
 /* Course Work Page */
 
@@ -161,6 +202,18 @@ input, textarea {
     border: 2px solid white;
     border-radius: 5px;
     background-color: rgb(114, 114, 114);
+}
+
+div.emptyErrorMessage {
+    margin: 0;
+    padding: 0;
+    height: 0;
+    width: 0;
+}
+
+div.filledErrorMessage {
+    font-size: 0.75em;
+    color: #FBFF00;
 }
 
 

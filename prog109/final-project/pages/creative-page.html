@@ -34,30 +34,37 @@
             <h1>Creative Page</h1>
 
             <div class="info">
-                &emsp;&emsp;&emsp;&emsp;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
-                tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
-                semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien
-                ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean
-                fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec
-                non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque
-                egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan
-                porttitor, facilisis luctus, metus.
+                <div id="specialInterest">
+                    <h3>Special Interest: Video Games &#x1F60E;</h3>
+                    <p>
+                        <img src="imgs/minecraft.jpg" alt="an image of the popular video game Minecraft: Steve and Alex are atop a hill with animals and monsters among them">
+                        I love video games, they are pretty cool, I love them so much. Hopefully this is a compelling and sufficient paragraph.
+                    </p>
+                    <p>
+                        
+                        <br>
+                        Here's a video of one of my favorite video games: <a target="_blank" href="https://store.steampowered.com/app/620/Portal_2/">Portal 2</a>
+                        <div class="iframe-container">
+                            <iframe src="https://www.youtube.com/embed/tax4e4hBBZc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </p>
+                </div>
                 <br>
                 <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
+                
                 Additionally, this page is enhanced with &#x1F3B5;&#x2728;<em>background music</em>&#x2728;&#x1F3B5;.
+                <br>
+                <sub>You may have to <em>click</em> for the music to start playing as many browsers block autoplay.</sub>
             </div>
         </div>
     
         <div id="side-column">
+            
             <img src="imgs/fortnite-dance-fortnite.gif" alt="Animation of Fortnite character performing the dance &quot;Orange Justice&quot;">
+   
         </div>
         
-        <audio src="music/the-beat-of-nature-122841.mp3" volume="50%" loop></audio>
+        <audio src="music/the-beat-of-nature-122841.mp3" autoplay loop></audio>
 
         <script>
             let music = document.querySelector("audio");
@@ -65,6 +72,7 @@
             music.volume = 0.20;
 
             document.onclick = () => music.play();
+            
         </script>
     </div>
     <div>&emsp;</div>
